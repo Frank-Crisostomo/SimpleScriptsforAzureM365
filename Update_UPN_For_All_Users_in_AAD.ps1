@@ -35,7 +35,7 @@ if (!$CheckModule){Install-Module AzureAD}
 Connect-AzureAD
 
 # Variables for old and new domains
-$NewDomain = "Contoso.com"
+$NewDomain = "contoso.com"
 $OldDomain = "contoso.onmicrosoft.com"
 
 # Check that new domain exist
