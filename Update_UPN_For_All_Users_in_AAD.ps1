@@ -24,7 +24,7 @@
     
     Version:        1.2.8.23
     Simple Script Series: Update UPN for All Users in Azure AD Tenant
-    Updated by Frank Crisostomo 2/7/2023
+    Updated by Frank Crisostomo 2/8/2023
 #>
 
 
