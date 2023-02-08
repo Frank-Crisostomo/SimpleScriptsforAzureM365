@@ -1,5 +1,5 @@
 <# 
-Simple Script Series: Update UPN for all Users in Azure AD Tenant
+Simple Script Series: Update UPN for All Users in Azure AD Tenant
 Created by Frank Crisostomo 2/6/2023
 #>
 
