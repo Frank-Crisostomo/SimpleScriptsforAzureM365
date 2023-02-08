@@ -20,13 +20,13 @@
   PS> .\Update_UPN_For_All_Users_in_AAD.ps1
 
     .NOTES
+    Scenario: Update UPN for All Users in Azure AD Tenant after addding a new domain to Azure AD.
+    
     Version:        1.2.8.23
     Simple Script Series: Update UPN for All Users in Azure AD Tenant
     Updated by Frank Crisostomo 2/7/2023
-    Scenarios: Update UPN for All Users in Azure AD Tenant
-
-
 #>
+
 
 # Install AzureAD Module
 Install-Module AzureAD
