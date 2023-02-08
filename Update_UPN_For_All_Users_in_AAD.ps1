@@ -45,7 +45,7 @@ $GetDomain = Get-AzureADDomain -Name $NewDomain
 # Get all AzureAD Users that are not guests Accounts such as B2B Accounts
 $Users = Get-AzureADUser -All $true | Where-Object {($_.UserPrincipalName -notlike $NewDomain) -and ($_.UserType -ne 'Guest')}
 
-# For each user from the list of $Users
+    # For each user from the list of $Users
     Foreach($User in $Users){
 
     # Get there current UPN
