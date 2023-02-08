@@ -1,6 +1,6 @@
 # Simple Script Series
 # Change UPN for all Users in Azure AD Tenant
-# Created by Frank C. 2/6/2023
+# Created by Frank Crisostomo. 2/6/2023
 
 # Install AzureAD Module
 Install-Module AzureAD
