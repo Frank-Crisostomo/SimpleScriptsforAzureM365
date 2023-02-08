@@ -1,2 +1,2 @@
-# Simple Scripts for Azure & M365
-Simple scripts for managing identities and services in Azure and M365
+# Simple Scripts for AzureAD & M365 Identity Management
+Simple scripts for managing identities and services in AzureAD and M365
