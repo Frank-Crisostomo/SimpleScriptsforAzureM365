@@ -42,7 +42,7 @@ $OldDomain = "contoso.onmicrosoft.com"
 $GetDomain = Get-AzureADDomain -Name $NewDomain
     If ($GetDomain){Write-Host "Domain" $NewDomain "exists" -ForegroundColor Green} Else {Write-Host "Domain" $NewDomain "does not exist" -ForegroundColor Red}
 
-# Get all AzureAD Users that are not Guest(B2B) Accounts
+# Get all AzureAD Users that are not guests Accounts such as B2B Accounts
 $Users = Get-AzureADUser -All $true | Where-Object {($_.UserPrincipalName -notlike $NewDomain) -and ($_.UserType -ne 'Guest')}
 
 # For each user from the list of $Users
