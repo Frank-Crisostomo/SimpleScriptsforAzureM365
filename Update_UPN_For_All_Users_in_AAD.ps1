@@ -1,6 +1,6 @@
 <#
   .SYNOPSIS
-  Simple Script Series: Update UPN for All Users in Azure AD Tenant
+  Simple Script Series: Update UPN for All Users in Azure AD Tenant.
 
   .DESCRIPTION
  This script updates the UPN for all users in an Azure AD Tenant. This script is part of the Simple Script Series. The Simple Script Series is a collection of scripts that perform simple tasks. The scripts are designed to be easy to understand and modify.
