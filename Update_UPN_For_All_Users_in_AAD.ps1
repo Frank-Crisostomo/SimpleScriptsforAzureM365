@@ -29,10 +29,7 @@
 
 # Checks module, if missing it installs
 $CheckModule = Get-Module AzureAD
-
-if (!$CheckModule){
-# Install AzureAD Module
-Install-Module AzureAD}
+if (!$CheckModule){Install-Module AzureAD}
 
 # Connect to AzureAD        
 Connect-AzureAD
