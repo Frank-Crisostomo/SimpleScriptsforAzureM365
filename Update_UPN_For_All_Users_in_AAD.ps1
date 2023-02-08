@@ -23,6 +23,9 @@
     Version:        1.2.8.23
     Simple Script Series: Update UPN for All Users in Azure AD Tenant
     Updated by Frank Crisostomo 2/7/2023
+    Scenarios: Update UPN for All Users in Azure AD Tenant
+
+
 #>
 
 # Install AzureAD Module
@@ -32,8 +35,8 @@ Install-Module AzureAD
 Connect-AzureAD
 
 # Variables for old and new domains
-$OldDomain = "Contoso.com"
-$NewDomain = "contoso.onmicrosoft.com"
+$NewDomain = "Contoso.com"
+$OldDomain = "contoso.onmicrosoft.com"
 
 # Check that new domain exist
 $GetDomain = Get-AzureADDomain -Name $NewDomain
