@@ -58,7 +58,7 @@ $Users = Get-AzureADUser -All $true | Where-Object {($_.UserPrincipalName -notli
     Write-Host $user.UserPrincipalName "Updating to" $NewUPN -ForegroundColor Yellow
 
     # Set $NewUPN
-    Set-AzureADUser -UserPrincipalName $NewUPN
+    Set-AzureADUser -ObjectId $oldUPN -UserPrincipalName $NewUPN
 
     # Checks that UPN has been updated
     $UpdatedUser = Get-AzureADUser -ObjectId $NewUPN
