@@ -62,8 +62,7 @@ $Users = Get-AzureADUser -All $true | Where-Object {($_.UserPrincipalName -notli
 
     # Checks that UPN has been updated
     $UpdatedUser = Get-AzureADUser -ObjectId $NewUPN
-    If ($UpdatedUser){Write-Host $OldUPN "Updated to" $UpdatedUser.UserPrincipalName -ForegroundColor Green}
-    Else {Write-Host $OldUPN "Failed to update" -ForegroundColor Red}
+    If ($UpdatedUser){Write-Host $OldUPN "Updated to" $UpdatedUser.UserPrincipalName -ForegroundColor Green} Else {Write-Host $OldUPN "Failed to update" -ForegroundColor Red}
     }
 
 # Disconnect from AzureAD
