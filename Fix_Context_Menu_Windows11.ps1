@@ -36,3 +36,7 @@ function FixContextMenu {
   }
  # Run function
  FixContextMenu
+
+ # You will have to restart your computer for the changes to take effect.
+
+ # End of Script
