@@ -36,6 +36,3 @@ function FixContextMenu {
   }
  # Run function
  FixContextMenu
- 
- 
- 
