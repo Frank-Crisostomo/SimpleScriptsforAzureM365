@@ -1,19 +1,21 @@
 <#
   .SYNOPSIS
-  Simple Script Series: Fix Context Menu in Windows 11.
+  Simple Script Series: This script fixes the context menu in Windows 11, to fully expand the right-click menu without the need to click on "Show More options".
   .DESCRIPTION
- This script will fix the context menu in Windows 11 so that it functions like Windows 10.
-  None.
+  This script fixes the context menu in Windows 11, to fully expand the right-click menu without the need to click on "Show More options".
+  
   .PARAMETER OutputPath
+
   .INPUTS
-  None.
+  None. You cannot pipe objects to Fix_Windows11_Context_Menu.ps1.
   .OUTPUTS
   None.
   .EXAMPLE
   PS> .\Fix_Windows11_Context_Menu.ps1
     .NOTES
-    Simple Script Series: Fix context menu in Windows 11, returning to Windows 10 functionality. No administrator privileges required. This only applies to the current user running the script.
-    Updated by Francis Crisostomo 9/9/2023
+    
+  .AUTHOR
+  Francis Crisostomo 9/9/2023
 #>
 
 # Function to fix context menu
