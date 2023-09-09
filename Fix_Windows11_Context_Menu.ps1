@@ -10,7 +10,7 @@
   .OUTPUTS
   None.
   .EXAMPLE
-  PS> .\FixContexMenu.ps1
+  PS> .\Fix_Windows11_Context_Menu.ps1
     .NOTES
     Simple Script Series: Fix context menu in Windows 11, returning to Windows 10 functionality. No administrator privileges required. This only applies to the current user running the script.
     Updated by Francis Crisostomo 9/9/2023
