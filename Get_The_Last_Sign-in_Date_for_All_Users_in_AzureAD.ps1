@@ -27,19 +27,12 @@ This script can be modify to run locally on a computer or server if you have obt
 
 Once the data is in the Azure Table Storage, you can use Power BI to create a report. https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-azure-tables or export to CSV.
 
-Updated by Frank Crisostomo. 8/30/2022
+Updated by Francis Crisostomo. 9/9/2023
 #>
-
-# Checks module, if missing it installs (AzureAD)
-$CheckModule = Get-Module AzureAD
-if (!$CheckModule){Install-Module AzureAD}
 
 # Checks module, if missing it installs (AztTable)
 $CheckModule = Get-Module aztable
 if (!$CheckModule){Install-Module aztable}
-
-# Connect to AzureAD        
-Connect-AzureAD
 
 # Store the values of the variables for this runbook in the Azure Automation Account, instead of the script for better security.
 # Set automation account variables used in this runbook. They are stored as encrypted variables in the automation account.
