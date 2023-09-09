@@ -45,9 +45,6 @@ $TenantId = Get-AutomationVariable -Name 'TenantID' # This is the Tenant ID for 
 $AppClientId= Get-AutomationVariable -Name 'LastSignInUsersAppClientID' # This is the App Client ID for the Azure AD App.
 $ClientSecret = Get-AutomationVariable -Name 'LastSignInUsersClientSecret' # This is the Client Secret for the Azure AD App.
 
-# Automation account variables for this runbook
-# These are the names of the variables used in this runbook. They are stored as encrypted variables in the automation account
-
 # Set execution policy to bypass for this process
 Set-ExecutionPolicy Bypass -Scope Process -Force
 
