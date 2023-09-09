@@ -2,7 +2,7 @@
 .SYNOPSIS
 	Get the last sign-in date for all users in AzureAD/EntraID.
 .DESCRIPTION
-	This PowerShell script retrieves the sign-in date for all users in an Azure AD tenant using MSGraph API.
+	This PowerShell script retrieves the sign-in date for all users in an AzureAD/EntraID tenant using the Microsoft Graph API. It then saves the data to an Azure Table Storage table. This script can be used in an Azure Automation Runbook to get the last sign-in date for all users in an Azure AD tenant on a schedule and post it to a table in Azure Table Storage. This script can be modify to run locally on a computer or server if you have obtain the Azure AD App Client ID and Client Secret. It can also be modify to save the data to a CSV file. Once the data is in the Azure Table Storage, you can use Power BI to create a report. https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-azure-tables or export to CSV.
 .PARAMETER
 
 .EXAMPLE
@@ -65,6 +65,28 @@ $automationVariableNames = @(
 
 # Set execution policy to bypass for this process
 Set-ExecutionPolicy Bypass -Scope Process -Force
+
+
+# Setup Azure table function
+Write-Output "Setting up ClearTable function"
+Function ClearTable {
+        $datetime = Get-Date
+        $partitionKey = "Users"
+        $processes = @()
+
+        Write-Output "Connecting to Azure Storabe Table"
+        # Connect to Azure Table Storage
+        $Ctx = New-AzStorageContext -StorageAccountName $storageAccountName -SasToken $sasToken
+        $storageTable = (Get-AzStorageTable -Name $TableName -Context $ctx).CloudTable
+
+        # Empty previous content on table
+        # Get all rows and pipe the result into the remove cmdlet.
+        Get-AzTableRow -table $StorageTable | Remove-AzTableRow -table $StorageTable 
+}
+
+# Clear previous table. You can comment out the next two lines if you want to keep the previous data in the table.
+Write-Output "Clearing previous table"
+ClearTable -EA 0
 
 #  Function to add data to Azure Table
 Write-Output "Setting up AddToTable function"
