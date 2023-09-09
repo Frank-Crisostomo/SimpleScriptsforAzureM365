@@ -27,19 +27,12 @@ This script can be modify to run locally on a computer or server if you have obt
 
 Once the data is in the Azure Table Storage, you can use Power BI to create a report. https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-azure-tables or export to CSV.
 
-Updated by Frank Crisostomo. 8/30/2022
+Updated by Francis Crisostomo. 9/9/2023
 #>
-
-# Checks module, if missing it installs (AzureAD)
-$CheckModule = Get-Module AzureAD
-if (!$CheckModule){Install-Module AzureAD}
 
 # Checks module, if missing it installs (AztTable)
 $CheckModule = Get-Module aztable
 if (!$CheckModule){Install-Module aztable}
-
-# Connect to AzureAD        
-Connect-AzureAD
 
 # Store the values of the variables for this runbook in the Azure Automation Account, instead of the script for better security.
 # Set automation account variables used in this runbook. They are stored as encrypted variables in the automation account.
@@ -51,17 +44,6 @@ $sasToken = Get-AutomationVariable -Name 'LastSignInUserSASToken' # This is the 
 $TenantId = Get-AutomationVariable -Name 'TenantID' # This is the Tenant ID for the Azure AD tenant.
 $AppClientId= Get-AutomationVariable -Name 'LastSignInUsersAppClientID' # This is the App Client ID for the Azure AD App.
 $ClientSecret = Get-AutomationVariable -Name 'LastSignInUsersClientSecret' # This is the Client Secret for the Azure AD App.
-
-# Automation account variables for this runbook
-# These are the names of the variables used in this runbook. They are stored as encrypted variables in the automation account.
-$automationVariableNames = @(
-    'LastSignInUsersStorageAccount',
-    'LastSignTable',
-    'LastSignUserSasToken',
-    'TenantId',
-    'LastSignInUsersAppClientID',
-    'LastSignInUsersClientSecret'
-)
 
 # Set execution policy to bypass for this process
 Set-ExecutionPolicy Bypass -Scope Process -Force
@@ -156,6 +138,6 @@ Foreach ($User in $Result){
  }
  
 # Processing Completed
-Write-Output "Automation Completed"
+Write-Output "Job is done"
 
 # End of Script
