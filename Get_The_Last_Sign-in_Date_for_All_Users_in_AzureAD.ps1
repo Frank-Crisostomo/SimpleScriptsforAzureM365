@@ -23,7 +23,10 @@
 .NOTES
 This script is part of the Simple Script Series. The Simple Script Series is a collection of scripts that perform simple tasks. The scripts are designed to be easy to understand and modify.
 This script can be used in an Azure Automation Runbook to get the last sign-in date for all users in an Azure AD tenant on a schedule and post it to a table in Azure Table Storage.
-This script can be modify to run locally on a computer or server if you have obtain the Azure AD App Client ID and Client Secret. It can also be modify to save the data to a CSV file.ggithub
+This script can be modify to run locally on a computer or server if you have obtain the Azure AD App Client ID and Client Secret. It can also be modify to save the data to a CSV file.
+
+Once the data is in the Azure Table Storage, you can use Power BI to create a report. https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-azure-tables or export to CSV.
+
 Updated by Frank Crisostomo. 8/30/2022
 #>
 
