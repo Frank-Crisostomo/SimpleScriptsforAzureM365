@@ -116,6 +116,6 @@ Foreach ($User in $Result){
  }
  
 # Processing Completed
-Write-Output "Automation Completed"
+Write-Output "Job is done"
 
 # End of Script
