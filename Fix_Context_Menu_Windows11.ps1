@@ -13,7 +13,7 @@
   PS> .\FixContexMenu.ps1
     .NOTES
     Simple Script Series: Fix context menu in Windows 11, returning to Windows 10 functionality. No administrator privileges required. This only applies to the current user running the script.
-    Updated by Francis Crisostomo 8/7/2023
+    Updated by Francis Crisostomo 9/9/2023
 #>
 
 # Function to fix context menu
@@ -34,9 +34,11 @@ function FixContextMenu {
        Write-Host "Registry key added"
      }
   }
+  
  # Run function
  FixContextMenu
 
  # You will have to restart your computer for the changes to take effect.
+Write-Output "You will have to restart your computer for the changes to take effect."
 
  # End of Script
