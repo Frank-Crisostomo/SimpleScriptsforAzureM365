@@ -137,6 +137,6 @@ Foreach ($User in $Result){
  }
  
 # Processing Completed
-Write-Output "Processing Completed"
+Write-Output "Processing Completed get-date -Format 'yyyy-MM-dd HH:mm:ss' "
 
 # End of Script
