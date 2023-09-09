@@ -43,7 +43,7 @@ Connect-AzureAD
 # This is assigning the values of the automation account variables to the variables used in this runbook.
 
 $storageAccountName = Get-AutomationVariable -Name 'LastSignInUsersStorageAccount' # This is the name of the storage account where the table is stored.
-$tableName = Get-AutomationVariable -Name 'LastLoginTable' # This is the name of the table where the data is stored.
+$tableName = Get-AutomationVariable -Name 'LastSignTable' # This is the name of the table where the data is stored.
 $sasToken = Get-AutomationVariable -Name 'LastSignInUserSASToken' # This is the SAS token for the storage account.
 $TenantId = Get-AutomationVariable -Name 'TenantID' # This is the Tenant ID for the Azure AD tenant.
 $AppClientId= Get-AutomationVariable -Name 'LastSignInUsersAppClientID' # This is the App Client ID for the Azure AD App.
@@ -52,12 +52,12 @@ $ClientSecret = Get-AutomationVariable -Name 'LastSignInUsersClientSecret' # Thi
 # Automation account variables for this runbook
 # These are the names of the variables used in this runbook. They are stored as encrypted variables in the automation account.
 $automationVariableNames = @(
-    'InactiveUsersStorageAccount',
-    'LastLoginTable',
-    'InactiveUserSasToken',
+    'LastSignInUsersStorageAccount',
+    'LastSignTable',
+    'LastSignUserSasToken',
     'TenantId',
-    'InactiveUsersAppClientID',
-    'InactiveUsersClientSecret'
+    'LastSignInUsersAppClientID',
+    'LastSignInUsersClientSecret'
 )
 
 # Set execution policy to bypass for this process
