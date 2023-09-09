@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-	Get the last sign-in date for all users in Azure AD.
+	Get the last sign-in date for all users in AzureAD/EntraID.
 .DESCRIPTION
 	This PowerShell script retrieves the sign-in date for all users in an Azure AD tenant using MSGraph API.
 .PARAMETER
