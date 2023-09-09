@@ -93,7 +93,6 @@ $processes = $User
         "UserPrincipalName" = $user.userPrincipalName
 		"Enabled" = $AccountEnabled
         
-        
         }
     }
 }
@@ -138,6 +137,6 @@ Foreach ($User in $Result){
  }
  
 # Processing Completed
-Write-Output "Job is done"
+Write-Output "Processing Completed"
 
 # End of Script
